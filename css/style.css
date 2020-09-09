@@ -17,6 +17,7 @@
     --linkedinColor: blue;
     --monsterColor: purple;
     --indeedColor: rgb(7, 170, 224);
+    --background-image: url('connections.jpg');
 }
 
 * {
