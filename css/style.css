@@ -24,6 +24,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'raleway', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-clip: var(--monsterColor);
 }
 
 figure {
