@@ -24,7 +24,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'raleway', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-clip: var(--monsterColor);
 }
 
 figure {
@@ -59,7 +58,7 @@ nav ul {
 }
 
 header {
-    height: 70px;
+    height: 150px;
 }
 
 .logo {
@@ -75,6 +74,7 @@ nav li {
     margin-right: 75px;
     font-size: 1.3rem;
     line-height: 75px;
+    display: flex;
 }
 
 li a {
@@ -84,14 +84,16 @@ li a {
 .main,
 .about,
 .skills-card,
+.degree-cards,
 .certs-cards,
 .contact {
-    padding: 150px 0 0 50px;
+    padding: 15px 0 0 50px;
     position: absolute;
 }
 
 .about,
 .skills,
+.degrees,
 .certs,
 .contact {
     opacity: 0;
@@ -100,11 +102,14 @@ li a {
 .main h1,
 .about h1,
 .certs h1,
+.degrees h1,
 .skills h1 {
     font-size: 3rem;
 }
 
 .certs,
+h1,
+.degrees,
 h1,
 .contact,
 h1 {
@@ -128,6 +133,7 @@ h1:nth-child(2) {
 .main a,
 .about a,
 .certs a,
+.degrees a,
 .skills a,
 .contact button {
     color: var(--white);
@@ -141,12 +147,14 @@ h1:nth-child(2) {
 .about h1,
 .skills h1,
 .certs h1,
+.degrees h1,
 .contact h1 {
     margin-bottom: 2px;
 }
 
 .about p,
 .certs p,
+.degrees p,
 .skills>p {
     max-width: 650px;
     font-size: 1.3rem;
@@ -157,6 +165,7 @@ h1:nth-child(2) {
 
 .skills,
 .certs,
+.degrees,
 .contact {
     padding: 100px 0 0 50px;
     position: absolute;
@@ -214,6 +223,63 @@ h1:nth-child(2) {
 }
 
 .skills h3 {
+    text-transform: uppercase;
+    color: var(--skillsH3Color);
+    margin-top: 5px;
+}
+
+.degree-cards {
+    display: flex;
+    flex-wrap: flex;
+    text-align: center;
+    max-width: 50px;
+}
+
+.degree-cards div {
+    border: 2px solid var(--certsCardColor);
+    padding: 2px;
+    margin: 10px 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.degree-cards div::after {
+    content: '';
+    width: 100%;
+    height: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--certsCardColor);
+    z-index: -1;
+    transition: .5s ease;
+}
+
+.degree-cards div:hover::after {
+    height: 100%;
+}
+
+.degree-cards div:hover p {
+    color: var(--white);
+}
+
+.degree-cards div:first-child {
+    margin-left: 0;
+}
+
+.degree-cards p {
+    max-width: 100px;
+    font-size: .9rem;
+    margin-top: 1px;
+    color: var(--sectionParaColor);
+    font-weight: 100;
+}
+
+.degree-cards img {
+    width: 100%;
+}
+
+.degree h3 {
     text-transform: uppercase;
     color: var(--skillsH3Color);
     margin-top: 5px;
